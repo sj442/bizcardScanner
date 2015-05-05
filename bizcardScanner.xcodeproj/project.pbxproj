@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0507831AF94BF900D361F0 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507821AF94BF900D361F0 /* DataManager.m */; };
+		3F0507861AF94C0800D361F0 /* BizCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507851AF94C0800D361F0 /* BizCard.m */; };
+		3F0507891AF94C1400D361F0 /* Contact+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507881AF94C1400D361F0 /* Contact+Manager.m */; };
+		3F05078C1AF94C2300D361F0 /* Account+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F05078B1AF94C2300D361F0 /* Account+Manager.m */; };
+		3F0507911AF94C3B00D361F0 /* CONAccountListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F05078E1AF94C3B00D361F0 /* CONAccountListTableViewController.m */; };
+		3F0507921AF94C3B00D361F0 /* CONContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507901AF94C3B00D361F0 /* CONContactListTableViewController.m */; };
+		3F0507941AF94C4B00D361F0 /* CONBizcardListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507931AF94C4B00D361F0 /* CONBizcardListTableViewController.m */; };
+		3F0507961AF94C8200D361F0 /* errorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0507951AF94C8200D361F0 /* errorIcon.png */; };
+		3F0507981AF94C8A00D361F0 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0507971AF94C8A00D361F0 /* lock.png */; };
 		3FA151801AEFCFAC00CA5CA8 /* ABBYYTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */; };
 		3FA151811AEFCFAC00CA5CA8 /* ActivationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151771AEFCFAC00CA5CA8 /* ActivationInfo.m */; };
 		3FA151821AEFCFAC00CA5CA8 /* HTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151791AEFCFAC00CA5CA8 /* HTTPOperation.m */; };
@@ -26,23 +35,14 @@
 		3FA151C11AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151C01AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m */; };
 		3FA151CB1AEFF80400CA5CA8 /* grayShutter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA151C91AEFF80400CA5CA8 /* grayShutter@2x.png */; };
 		3FA151CC1AEFF80400CA5CA8 /* whiteShutter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA151CA1AEFF80400CA5CA8 /* whiteShutter@2x.png */; };
-		3FA151CF1AEFFA8500CA5CA8 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151CE1AEFFA8500CA5CA8 /* DataManager.m */; };
 		3FA151D51AEFFBA400CA5CA8 /* BizCard+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151D41AEFFBA400CA5CA8 /* BizCard+Manager.m */; };
 		3FA151D81AEFFE8600CA5CA8 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151D71AEFFE8600CA5CA8 /* Account.m */; };
 		3FA151DB1AEFFE8700CA5CA8 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151DA1AEFFE8700CA5CA8 /* Contact.m */; };
-		3FA151DE1AEFFEA200CA5CA8 /* Contact+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151DD1AEFFEA200CA5CA8 /* Contact+Manager.m */; };
-		3FA151E11AEFFEB500CA5CA8 /* Account+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151E01AEFFEB500CA5CA8 /* Account+Manager.m */; };
 		3FA151E41AF002CC00CA5CA8 /* UIAlertController+Conquer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151E31AF002CC00CA5CA8 /* UIAlertController+Conquer.m */; };
-		3FA151E61AF010BE00CA5CA8 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA151E51AF010BE00CA5CA8 /* lock.png */; };
 		3FA151E91AF0313900CA5CA8 /* BizcardOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151E81AF0313900CA5CA8 /* BizcardOperation.m */; };
 		3FA151EE1AF1189500CA5CA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA151ED1AF1189500CA5CA8 /* SystemConfiguration.framework */; };
 		3FA151F51AF11B2000CA5CA8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151F41AF11B2000CA5CA8 /* Reachability.m */; };
-		3FA151FC1AF1416F00CA5CA8 /* CONContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151FB1AF1416F00CA5CA8 /* CONContactListTableViewController.m */; };
-		3FA151FF1AF14B5900CA5CA8 /* CONAccountListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151FE1AF14B5900CA5CA8 /* CONAccountListTableViewController.m */; };
 		3FA152041AF28B0600CA5CA8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA152031AF28B0600CA5CA8 /* AddressBook.framework */; };
-		3FA1520F1AF3F86100CA5CA8 /* BizCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1520E1AF3F86100CA5CA8 /* BizCard.m */; };
-		3FA152111AF4152700CA5CA8 /* errorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA152101AF4152700CA5CA8 /* errorIcon.png */; };
-		3FA152641AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152631AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m */; };
 		3FA152671AF906CE00CA5CA8 /* CONTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152661AF906CE00CA5CA8 /* CONTextViewTableViewCell.m */; };
 		3FA1526A1AF90A2400CA5CA8 /* CONPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152691AF90A2400CA5CA8 /* CONPlaceholderTextView.m */; };
 		3FDFA9F01AEFCA9200C41FA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9EF1AEFCA9200C41FA5 /* main.m */; };
@@ -64,6 +64,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0507811AF94BF900D361F0 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Model/DataManager.h; sourceTree = "<group>"; };
+		3F0507821AF94BF900D361F0 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = Model/DataManager.m; sourceTree = "<group>"; };
+		3F0507841AF94C0800D361F0 /* BizCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BizCard.h; path = Model/BizCard.h; sourceTree = "<group>"; };
+		3F0507851AF94C0800D361F0 /* BizCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BizCard.m; path = Model/BizCard.m; sourceTree = "<group>"; };
+		3F0507871AF94C1400D361F0 /* Contact+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+Manager.h"; path = "Model/Contact+Manager.h"; sourceTree = "<group>"; };
+		3F0507881AF94C1400D361F0 /* Contact+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+Manager.m"; path = "Model/Contact+Manager.m"; sourceTree = "<group>"; };
+		3F05078A1AF94C2300D361F0 /* Account+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+Manager.h"; path = "Model/Account+Manager.h"; sourceTree = "<group>"; };
+		3F05078B1AF94C2300D361F0 /* Account+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+Manager.m"; path = "Model/Account+Manager.m"; sourceTree = "<group>"; };
+		3F05078D1AF94C3B00D361F0 /* CONAccountListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONAccountListTableViewController.h; path = ViewControllers/CONAccountListTableViewController.h; sourceTree = "<group>"; };
+		3F05078E1AF94C3B00D361F0 /* CONAccountListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONAccountListTableViewController.m; path = ViewControllers/CONAccountListTableViewController.m; sourceTree = "<group>"; };
+		3F05078F1AF94C3B00D361F0 /* CONContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONContactListTableViewController.h; path = ViewControllers/CONContactListTableViewController.h; sourceTree = "<group>"; };
+		3F0507901AF94C3B00D361F0 /* CONContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONContactListTableViewController.m; path = ViewControllers/CONContactListTableViewController.m; sourceTree = "<group>"; };
+		3F0507931AF94C4B00D361F0 /* CONBizcardListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONBizcardListTableViewController.m; path = ViewControllers/CONBizcardListTableViewController.m; sourceTree = "<group>"; };
+		3F0507951AF94C8200D361F0 /* errorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = errorIcon.png; path = Resources/errorIcon.png; sourceTree = "<group>"; };
+		3F0507971AF94C8A00D361F0 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = Resources/lock.png; sourceTree = "<group>"; };
 		3FA151741AEFCFAC00CA5CA8 /* ABBYYTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABBYYTask.h; path = Vendor/ABBYY/SDK/ABBYYTask.h; sourceTree = "<group>"; };
 		3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABBYYTask.m; path = Vendor/ABBYY/SDK/ABBYYTask.m; sourceTree = "<group>"; };
 		3FA151761AEFCFAC00CA5CA8 /* ActivationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivationInfo.h; path = Vendor/ABBYY/SDK/ActivationInfo.h; sourceTree = "<group>"; };
@@ -101,35 +116,20 @@
 		3FA151C01AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONTextFieldTableViewCell.m; path = TableViewCells/CONTextFieldTableViewCell.m; sourceTree = "<group>"; };
 		3FA151C91AEFF80400CA5CA8 /* grayShutter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grayShutter@2x.png"; path = "Resources/2x/grayShutter@2x.png"; sourceTree = "<group>"; };
 		3FA151CA1AEFF80400CA5CA8 /* whiteShutter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "whiteShutter@2x.png"; path = "Resources/2x/whiteShutter@2x.png"; sourceTree = "<group>"; };
-		3FA151CD1AEFFA8500CA5CA8 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		3FA151CE1AEFFA8500CA5CA8 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		3FA151D31AEFFBA400CA5CA8 /* BizCard+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BizCard+Manager.h"; path = "Model/BizCard+Manager.h"; sourceTree = "<group>"; };
 		3FA151D41AEFFBA400CA5CA8 /* BizCard+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BizCard+Manager.m"; path = "Model/BizCard+Manager.m"; sourceTree = "<group>"; };
 		3FA151D61AEFFE8600CA5CA8 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Model/Account.h; sourceTree = "<group>"; };
 		3FA151D71AEFFE8600CA5CA8 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Model/Account.m; sourceTree = "<group>"; };
 		3FA151D91AEFFE8700CA5CA8 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = Model/Contact.h; sourceTree = "<group>"; };
 		3FA151DA1AEFFE8700CA5CA8 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = Model/Contact.m; sourceTree = "<group>"; };
-		3FA151DC1AEFFEA200CA5CA8 /* Contact+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+Manager.h"; sourceTree = "<group>"; };
-		3FA151DD1AEFFEA200CA5CA8 /* Contact+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+Manager.m"; sourceTree = "<group>"; };
-		3FA151DF1AEFFEB500CA5CA8 /* Account+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+Manager.h"; sourceTree = "<group>"; };
-		3FA151E01AEFFEB500CA5CA8 /* Account+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+Manager.m"; sourceTree = "<group>"; };
 		3FA151E21AF002CC00CA5CA8 /* UIAlertController+Conquer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Conquer.h"; path = "Categories/UIAlertController+Conquer.h"; sourceTree = "<group>"; };
 		3FA151E31AF002CC00CA5CA8 /* UIAlertController+Conquer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Conquer.m"; path = "Categories/UIAlertController+Conquer.m"; sourceTree = "<group>"; };
-		3FA151E51AF010BE00CA5CA8 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		3FA151E71AF0313900CA5CA8 /* BizcardOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BizcardOperation.h; sourceTree = "<group>"; };
 		3FA151E81AF0313900CA5CA8 /* BizcardOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BizcardOperation.m; sourceTree = "<group>"; };
 		3FA151ED1AF1189500CA5CA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3FA151F31AF11B2000CA5CA8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		3FA151F41AF11B2000CA5CA8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		3FA151FA1AF1416F00CA5CA8 /* CONContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONContactListTableViewController.h; sourceTree = "<group>"; };
-		3FA151FB1AF1416F00CA5CA8 /* CONContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONContactListTableViewController.m; sourceTree = "<group>"; };
-		3FA151FD1AF14B5900CA5CA8 /* CONAccountListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONAccountListTableViewController.h; sourceTree = "<group>"; };
-		3FA151FE1AF14B5900CA5CA8 /* CONAccountListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONAccountListTableViewController.m; sourceTree = "<group>"; };
 		3FA152031AF28B0600CA5CA8 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		3FA1520D1AF3F86000CA5CA8 /* BizCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BizCard.h; sourceTree = "<group>"; };
-		3FA1520E1AF3F86100CA5CA8 /* BizCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BizCard.m; sourceTree = "<group>"; };
-		3FA152101AF4152700CA5CA8 /* errorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errorIcon.png; sourceTree = "<group>"; };
-		3FA152631AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONBizcardListTableViewController.m; sourceTree = "<group>"; };
 		3FA152651AF906CE00CA5CA8 /* CONTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONTextViewTableViewCell.h; path = TableViewCells/CONTextViewTableViewCell.h; sourceTree = "<group>"; };
 		3FA152661AF906CE00CA5CA8 /* CONTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONTextViewTableViewCell.m; path = TableViewCells/CONTextViewTableViewCell.m; sourceTree = "<group>"; };
 		3FA152681AF90A2400CA5CA8 /* CONPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONPlaceholderTextView.h; sourceTree = "<group>"; };
@@ -170,16 +170,16 @@
 		3FA151511AEFCDC000CA5CA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FA151FA1AF1416F00CA5CA8 /* CONContactListTableViewController.h */,
-				3FA151FB1AF1416F00CA5CA8 /* CONContactListTableViewController.m */,
-				3FA151FD1AF14B5900CA5CA8 /* CONAccountListTableViewController.h */,
-				3FA151FE1AF14B5900CA5CA8 /* CONAccountListTableViewController.m */,
+				3F05078D1AF94C3B00D361F0 /* CONAccountListTableViewController.h */,
+				3F05078E1AF94C3B00D361F0 /* CONAccountListTableViewController.m */,
+				3F05078F1AF94C3B00D361F0 /* CONContactListTableViewController.h */,
+				3F0507901AF94C3B00D361F0 /* CONContactListTableViewController.m */,
 				3FA151A71AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.h */,
 				3FA151A81AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.m */,
 				3FA151A91AEFD0DC00CA5CA8 /* CONBizcardImageViewController.h */,
 				3FA151AA1AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m */,
 				3FA151AB1AEFD0DC00CA5CA8 /* CONBizcardListTableViewController.h */,
-				3FA152631AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m */,
+				3F0507931AF94C4B00D361F0 /* CONBizcardListTableViewController.m */,
 				3FA151AD1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.h */,
 				3FA151AE1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m */,
 			);
@@ -189,18 +189,18 @@
 		3FA151521AEFCDCB00CA5CA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3FA1520D1AF3F86000CA5CA8 /* BizCard.h */,
-				3FA1520E1AF3F86100CA5CA8 /* BizCard.m */,
+				3F0507841AF94C0800D361F0 /* BizCard.h */,
+				3F0507851AF94C0800D361F0 /* BizCard.m */,
 				3FA151D31AEFFBA400CA5CA8 /* BizCard+Manager.h */,
 				3FA151D41AEFFBA400CA5CA8 /* BizCard+Manager.m */,
 				3FA151D91AEFFE8700CA5CA8 /* Contact.h */,
 				3FA151DA1AEFFE8700CA5CA8 /* Contact.m */,
-				3FA151DC1AEFFEA200CA5CA8 /* Contact+Manager.h */,
-				3FA151DD1AEFFEA200CA5CA8 /* Contact+Manager.m */,
+				3F0507871AF94C1400D361F0 /* Contact+Manager.h */,
+				3F0507881AF94C1400D361F0 /* Contact+Manager.m */,
 				3FA151D61AEFFE8600CA5CA8 /* Account.h */,
 				3FA151D71AEFFE8600CA5CA8 /* Account.m */,
-				3FA151DF1AEFFEB500CA5CA8 /* Account+Manager.h */,
-				3FA151E01AEFFEB500CA5CA8 /* Account+Manager.m */,
+				3F05078A1AF94C2300D361F0 /* Account+Manager.h */,
+				3F05078B1AF94C2300D361F0 /* Account+Manager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,10 +277,10 @@
 		3FA151C81AEFF77800CA5CA8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3FA152101AF4152700CA5CA8 /* errorIcon.png */,
+				3F0507951AF94C8200D361F0 /* errorIcon.png */,
 				3FA151C91AEFF80400CA5CA8 /* grayShutter@2x.png */,
 				3FA151CA1AEFF80400CA5CA8 /* whiteShutter@2x.png */,
-				3FA151E51AF010BE00CA5CA8 /* lock.png */,
+				3F0507971AF94C8A00D361F0 /* lock.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -320,8 +320,8 @@
 				3FA151EF1AF1196900CA5CA8 /* Reachability */,
 				3FDFA9F11AEFCA9200C41FA5 /* AppDelegate.h */,
 				3FDFA9F21AEFCA9200C41FA5 /* AppDelegate.m */,
-				3FA151CD1AEFFA8500CA5CA8 /* DataManager.h */,
-				3FA151CE1AEFFA8500CA5CA8 /* DataManager.m */,
+				3F0507811AF94BF900D361F0 /* DataManager.h */,
+				3F0507821AF94BF900D361F0 /* DataManager.m */,
 				3FA151E71AF0313900CA5CA8 /* BizcardOperation.h */,
 				3FA151E81AF0313900CA5CA8 /* BizcardOperation.m */,
 				3FA152681AF90A2400CA5CA8 /* CONPlaceholderTextView.h */,
@@ -448,9 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA151CC1AEFF80400CA5CA8 /* whiteShutter@2x.png in Resources */,
-				3FA152111AF4152700CA5CA8 /* errorIcon.png in Resources */,
-				3FA151E61AF010BE00CA5CA8 /* lock.png in Resources */,
 				3FDFAA011AEFCA9300C41FA5 /* LaunchScreen.xib in Resources */,
+				3F0507981AF94C8A00D361F0 /* lock.png in Resources */,
+				3F0507961AF94C8200D361F0 /* errorIcon.png in Resources */,
 				3FDFA9FE1AEFCA9300C41FA5 /* Images.xcassets in Resources */,
 				3FA151CB1AEFF80400CA5CA8 /* grayShutter@2x.png in Resources */,
 			);
@@ -471,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA151C11AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m in Sources */,
+				3F0507941AF94C4B00D361F0 /* CONBizcardListTableViewController.m in Sources */,
 				3FA1519A1AEFD0AE00CA5CA8 /* UITableView+Conquer.m in Sources */,
 				3FA151B21AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m in Sources */,
 				3FA1518B1AEFCFB900CA5CA8 /* CONABBYYResultParser.m in Sources */,
@@ -485,26 +486,25 @@
 				3FA151F51AF11B2000CA5CA8 /* Reachability.m in Sources */,
 				3FA151E91AF0313900CA5CA8 /* BizcardOperation.m in Sources */,
 				3FA1519D1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.m in Sources */,
-				3FA151CF1AEFFA8500CA5CA8 /* DataManager.m in Sources */,
+				3F0507921AF94C3B00D361F0 /* CONContactListTableViewController.m in Sources */,
+				3F05078C1AF94C2300D361F0 /* Account+Manager.m in Sources */,
 				3FA151E41AF002CC00CA5CA8 /* UIAlertController+Conquer.m in Sources */,
-				3FA151E11AEFFEB500CA5CA8 /* Account+Manager.m in Sources */,
 				3FA151831AEFCFAC00CA5CA8 /* NSData+Base64.m in Sources */,
 				3FA151981AEFD0AE00CA5CA8 /* UIColor+Conquer.m in Sources */,
-				3FA151FC1AF1416F00CA5CA8 /* CONContactListTableViewController.m in Sources */,
 				3FA152671AF906CE00CA5CA8 /* CONTextViewTableViewCell.m in Sources */,
 				3FA151841AEFCFAC00CA5CA8 /* NSString+Base64.m in Sources */,
-				3FA152641AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m in Sources */,
 				3FA151DB1AEFFE8700CA5CA8 /* Contact.m in Sources */,
+				3F0507831AF94BF900D361F0 /* DataManager.m in Sources */,
 				3FA151B01AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m in Sources */,
-				3FA151FF1AF14B5900CA5CA8 /* CONAccountListTableViewController.m in Sources */,
 				3FA151851AEFCFAC00CA5CA8 /* ProcessingOperation.m in Sources */,
+				3F0507911AF94C3B00D361F0 /* CONAccountListTableViewController.m in Sources */,
 				3FA151821AEFCFAC00CA5CA8 /* HTTPOperation.m in Sources */,
+				3F0507891AF94C1400D361F0 /* Contact+Manager.m in Sources */,
 				3FA151991AEFD0AE00CA5CA8 /* UIFont+Conquer.m in Sources */,
-				3FA1520F1AF3F86100CA5CA8 /* BizCard.m in Sources */,
 				3FDFA9F61AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld in Sources */,
-				3FA151DE1AEFFEA200CA5CA8 /* Contact+Manager.m in Sources */,
 				3FA151971AEFD0AE00CA5CA8 /* NSString+PList.m in Sources */,
 				3FDFA9F01AEFCA9200C41FA5 /* main.m in Sources */,
+				3F0507861AF94C0800D361F0 /* BizCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
