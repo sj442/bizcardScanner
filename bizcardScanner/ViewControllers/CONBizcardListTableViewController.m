@@ -362,8 +362,6 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
       BizcardOperation *bo = [[BizcardOperation alloc]initWithManagedObjectID:objectID];
       [[NSOperationQueue mainQueue] addOperation:bo];
     }
-    
-    [[DataManager sharedManager] saveContext:NO];
   }
 }
 

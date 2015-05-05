@@ -16,6 +16,7 @@
 		3F0507941AF94C4B00D361F0 /* CONBizcardListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507931AF94C4B00D361F0 /* CONBizcardListTableViewController.m */; };
 		3F0507961AF94C8200D361F0 /* errorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0507951AF94C8200D361F0 /* errorIcon.png */; };
 		3F0507981AF94C8A00D361F0 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0507971AF94C8A00D361F0 /* lock.png */; };
+		3F05079B1AF94E5900D361F0 /* bizcardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F0507991AF94E5900D361F0 /* bizcardScanner.xcdatamodeld */; };
 		3FA151801AEFCFAC00CA5CA8 /* ABBYYTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */; };
 		3FA151811AEFCFAC00CA5CA8 /* ActivationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151771AEFCFAC00CA5CA8 /* ActivationInfo.m */; };
 		3FA151821AEFCFAC00CA5CA8 /* HTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151791AEFCFAC00CA5CA8 /* HTTPOperation.m */; };
@@ -47,7 +48,6 @@
 		3FA1526A1AF90A2400CA5CA8 /* CONPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152691AF90A2400CA5CA8 /* CONPlaceholderTextView.m */; };
 		3FDFA9F01AEFCA9200C41FA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9EF1AEFCA9200C41FA5 /* main.m */; };
 		3FDFA9F31AEFCA9200C41FA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9F21AEFCA9200C41FA5 /* AppDelegate.m */; };
-		3FDFA9F61AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9F41AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld */; };
 		3FDFA9FE1AEFCA9300C41FA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFA9FD1AEFCA9300C41FA5 /* Images.xcassets */; };
 		3FDFAA011AEFCA9300C41FA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFA9FF1AEFCA9300C41FA5 /* LaunchScreen.xib */; };
 		3FDFAA0D1AEFCA9300C41FA5 /* bizcardScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFAA0C1AEFCA9300C41FA5 /* bizcardScannerTests.m */; };
@@ -79,6 +79,7 @@
 		3F0507931AF94C4B00D361F0 /* CONBizcardListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONBizcardListTableViewController.m; path = ViewControllers/CONBizcardListTableViewController.m; sourceTree = "<group>"; };
 		3F0507951AF94C8200D361F0 /* errorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = errorIcon.png; path = Resources/errorIcon.png; sourceTree = "<group>"; };
 		3F0507971AF94C8A00D361F0 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock.png; path = Resources/lock.png; sourceTree = "<group>"; };
+		3F05079A1AF94E5900D361F0 /* bizcardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bizcardScanner.xcdatamodel; sourceTree = "<group>"; };
 		3FA151741AEFCFAC00CA5CA8 /* ABBYYTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABBYYTask.h; path = Vendor/ABBYY/SDK/ABBYYTask.h; sourceTree = "<group>"; };
 		3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABBYYTask.m; path = Vendor/ABBYY/SDK/ABBYYTask.m; sourceTree = "<group>"; };
 		3FA151761AEFCFAC00CA5CA8 /* ActivationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivationInfo.h; path = Vendor/ABBYY/SDK/ActivationInfo.h; sourceTree = "<group>"; };
@@ -139,7 +140,6 @@
 		3FDFA9EF1AEFCA9200C41FA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FDFA9F11AEFCA9200C41FA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FDFA9F21AEFCA9200C41FA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3FDFA9F51AEFCA9300C41FA5 /* bizcardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bizcardScanner.xcdatamodel; sourceTree = "<group>"; };
 		3FDFA9FD1AEFCA9300C41FA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3FDFAA001AEFCA9300C41FA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3FDFAA061AEFCA9300C41FA5 /* bizcardScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bizcardScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,7 +333,7 @@
 				3FA151511AEFCDC000CA5CA8 /* ViewControllers */,
 				3FDFA9FD1AEFCA9300C41FA5 /* Images.xcassets */,
 				3FDFA9FF1AEFCA9300C41FA5 /* LaunchScreen.xib */,
-				3FDFA9F41AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld */,
+				3F0507991AF94E5900D361F0 /* bizcardScanner.xcdatamodeld */,
 				3FA151C81AEFF77800CA5CA8 /* Resources */,
 				3FDFA9ED1AEFCA9200C41FA5 /* Supporting Files */,
 			);
@@ -498,10 +498,10 @@
 				3FA151B01AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m in Sources */,
 				3FA151851AEFCFAC00CA5CA8 /* ProcessingOperation.m in Sources */,
 				3F0507911AF94C3B00D361F0 /* CONAccountListTableViewController.m in Sources */,
+				3F05079B1AF94E5900D361F0 /* bizcardScanner.xcdatamodeld in Sources */,
 				3FA151821AEFCFAC00CA5CA8 /* HTTPOperation.m in Sources */,
 				3F0507891AF94C1400D361F0 /* Contact+Manager.m in Sources */,
 				3FA151991AEFD0AE00CA5CA8 /* UIFont+Conquer.m in Sources */,
-				3FDFA9F61AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld in Sources */,
 				3FA151971AEFD0AE00CA5CA8 /* NSString+PList.m in Sources */,
 				3FDFA9F01AEFCA9200C41FA5 /* main.m in Sources */,
 				3F0507861AF94C0800D361F0 /* BizCard.m in Sources */,
@@ -713,13 +713,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3FDFA9F41AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld */ = {
+		3F0507991AF94E5900D361F0 /* bizcardScanner.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3FDFA9F51AEFCA9300C41FA5 /* bizcardScanner.xcdatamodel */,
+				3F05079A1AF94E5900D361F0 /* bizcardScanner.xcdatamodel */,
 			);
-			currentVersion = 3FDFA9F51AEFCA9300C41FA5 /* bizcardScanner.xcdatamodel */;
-			path = bizcardScanner.xcdatamodeld;
+			currentVersion = 3F05079A1AF94E5900D361F0 /* bizcardScanner.xcdatamodel */;
+			name = bizcardScanner.xcdatamodeld;
+			path = Model/bizcardScanner.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

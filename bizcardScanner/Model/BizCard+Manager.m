@@ -28,6 +28,7 @@
 + (NSFetchedResultsController *)fetchedResultsController
 {
   NSSortDescriptor *createdDate = [[NSSortDescriptor alloc] initWithKey:@"createdDate" ascending:NO];
+  NSSortDescriptor *dateProcessed = [[NSSortDescriptor alloc]initWithKey:@"dateProcessed" ascending:NO];
     
   NSManagedObjectContext *context = [DataManager sharedManager].mainContext;
   NSEntityDescription *entity = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context];
@@ -35,7 +36,7 @@
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
   [fetchRequest setEntity:entity];
   
-  [fetchRequest setSortDescriptors:@[createdDate]];
+  [fetchRequest setSortDescriptors:@[dateProcessed, createdDate]];
   
   [fetchRequest setFetchBatchSize:40];
   
