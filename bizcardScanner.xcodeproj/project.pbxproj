@@ -7,11 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA151801AEFCFAC00CA5CA8 /* ABBYYTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */; };
+		3FA151811AEFCFAC00CA5CA8 /* ActivationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151771AEFCFAC00CA5CA8 /* ActivationInfo.m */; };
+		3FA151821AEFCFAC00CA5CA8 /* HTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151791AEFCFAC00CA5CA8 /* HTTPOperation.m */; };
+		3FA151831AEFCFAC00CA5CA8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1517B1AEFCFAC00CA5CA8 /* NSData+Base64.m */; };
+		3FA151841AEFCFAC00CA5CA8 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1517D1AEFCFAC00CA5CA8 /* NSString+Base64.m */; };
+		3FA151851AEFCFAC00CA5CA8 /* ProcessingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1517F1AEFCFAC00CA5CA8 /* ProcessingOperation.m */; };
+		3FA1518A1AEFCFB900CA5CA8 /* CONABBYYManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151871AEFCFB900CA5CA8 /* CONABBYYManager.m */; };
+		3FA1518B1AEFCFB900CA5CA8 /* CONABBYYResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151891AEFCFB900CA5CA8 /* CONABBYYResultParser.m */; };
+		3FA151971AEFD0AE00CA5CA8 /* NSString+PList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151901AEFD0AE00CA5CA8 /* NSString+PList.m */; };
+		3FA151981AEFD0AE00CA5CA8 /* UIColor+Conquer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151921AEFD0AE00CA5CA8 /* UIColor+Conquer.m */; };
+		3FA151991AEFD0AE00CA5CA8 /* UIFont+Conquer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151941AEFD0AE00CA5CA8 /* UIFont+Conquer.m */; };
+		3FA1519A1AEFD0AE00CA5CA8 /* UITableView+Conquer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151961AEFD0AE00CA5CA8 /* UITableView+Conquer.m */; };
+		3FA1519D1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1519C1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.m */; };
+		3FA151AF1AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151A81AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.m */; };
+		3FA151B01AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151AA1AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m */; };
+		3FA151B21AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151AE1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m */; };
+		3FA151C11AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151C01AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m */; };
+		3FA151CB1AEFF80400CA5CA8 /* grayShutter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA151C91AEFF80400CA5CA8 /* grayShutter@2x.png */; };
+		3FA151CC1AEFF80400CA5CA8 /* whiteShutter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA151CA1AEFF80400CA5CA8 /* whiteShutter@2x.png */; };
+		3FA151CF1AEFFA8500CA5CA8 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151CE1AEFFA8500CA5CA8 /* DataManager.m */; };
+		3FA151D51AEFFBA400CA5CA8 /* BizCard+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151D41AEFFBA400CA5CA8 /* BizCard+Manager.m */; };
+		3FA151D81AEFFE8600CA5CA8 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151D71AEFFE8600CA5CA8 /* Account.m */; };
+		3FA151DB1AEFFE8700CA5CA8 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151DA1AEFFE8700CA5CA8 /* Contact.m */; };
+		3FA151DE1AEFFEA200CA5CA8 /* Contact+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151DD1AEFFEA200CA5CA8 /* Contact+Manager.m */; };
+		3FA151E11AEFFEB500CA5CA8 /* Account+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151E01AEFFEB500CA5CA8 /* Account+Manager.m */; };
+		3FA151E41AF002CC00CA5CA8 /* UIAlertController+Conquer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151E31AF002CC00CA5CA8 /* UIAlertController+Conquer.m */; };
+		3FA151E61AF010BE00CA5CA8 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA151E51AF010BE00CA5CA8 /* lock.png */; };
+		3FA151E91AF0313900CA5CA8 /* BizcardOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151E81AF0313900CA5CA8 /* BizcardOperation.m */; };
+		3FA151EE1AF1189500CA5CA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA151ED1AF1189500CA5CA8 /* SystemConfiguration.framework */; };
+		3FA151F51AF11B2000CA5CA8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151F41AF11B2000CA5CA8 /* Reachability.m */; };
+		3FA151FC1AF1416F00CA5CA8 /* CONContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151FB1AF1416F00CA5CA8 /* CONContactListTableViewController.m */; };
+		3FA151FF1AF14B5900CA5CA8 /* CONAccountListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA151FE1AF14B5900CA5CA8 /* CONAccountListTableViewController.m */; };
+		3FA152041AF28B0600CA5CA8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA152031AF28B0600CA5CA8 /* AddressBook.framework */; };
+		3FA1520F1AF3F86100CA5CA8 /* BizCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1520E1AF3F86100CA5CA8 /* BizCard.m */; };
+		3FA152111AF4152700CA5CA8 /* errorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA152101AF4152700CA5CA8 /* errorIcon.png */; };
+		3FA152641AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152631AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m */; };
+		3FA152671AF906CE00CA5CA8 /* CONTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152661AF906CE00CA5CA8 /* CONTextViewTableViewCell.m */; };
+		3FA1526A1AF90A2400CA5CA8 /* CONPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA152691AF90A2400CA5CA8 /* CONPlaceholderTextView.m */; };
 		3FDFA9F01AEFCA9200C41FA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9EF1AEFCA9200C41FA5 /* main.m */; };
 		3FDFA9F31AEFCA9200C41FA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9F21AEFCA9200C41FA5 /* AppDelegate.m */; };
 		3FDFA9F61AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9F41AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld */; };
-		3FDFA9F91AEFCA9300C41FA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFA9F81AEFCA9300C41FA5 /* ViewController.m */; };
-		3FDFA9FC1AEFCA9300C41FA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFA9FA1AEFCA9300C41FA5 /* Main.storyboard */; };
 		3FDFA9FE1AEFCA9300C41FA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFA9FD1AEFCA9300C41FA5 /* Images.xcassets */; };
 		3FDFAA011AEFCA9300C41FA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFA9FF1AEFCA9300C41FA5 /* LaunchScreen.xib */; };
 		3FDFAA0D1AEFCA9300C41FA5 /* bizcardScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFAA0C1AEFCA9300C41FA5 /* bizcardScannerTests.m */; };
@@ -28,15 +64,82 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FA151741AEFCFAC00CA5CA8 /* ABBYYTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABBYYTask.h; path = Vendor/ABBYY/SDK/ABBYYTask.h; sourceTree = "<group>"; };
+		3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABBYYTask.m; path = Vendor/ABBYY/SDK/ABBYYTask.m; sourceTree = "<group>"; };
+		3FA151761AEFCFAC00CA5CA8 /* ActivationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivationInfo.h; path = Vendor/ABBYY/SDK/ActivationInfo.h; sourceTree = "<group>"; };
+		3FA151771AEFCFAC00CA5CA8 /* ActivationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivationInfo.m; path = Vendor/ABBYY/SDK/ActivationInfo.m; sourceTree = "<group>"; };
+		3FA151781AEFCFAC00CA5CA8 /* HTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPOperation.h; path = Vendor/ABBYY/SDK/HTTPOperation.h; sourceTree = "<group>"; };
+		3FA151791AEFCFAC00CA5CA8 /* HTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPOperation.m; path = Vendor/ABBYY/SDK/HTTPOperation.m; sourceTree = "<group>"; };
+		3FA1517A1AEFCFAC00CA5CA8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Vendor/ABBYY/SDK/NSData+Base64.h"; sourceTree = "<group>"; };
+		3FA1517B1AEFCFAC00CA5CA8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Vendor/ABBYY/SDK/NSData+Base64.m"; sourceTree = "<group>"; };
+		3FA1517C1AEFCFAC00CA5CA8 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Base64.h"; path = "Vendor/ABBYY/SDK/NSString+Base64.h"; sourceTree = "<group>"; };
+		3FA1517D1AEFCFAC00CA5CA8 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Base64.m"; path = "Vendor/ABBYY/SDK/NSString+Base64.m"; sourceTree = "<group>"; };
+		3FA1517E1AEFCFAC00CA5CA8 /* ProcessingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessingOperation.h; path = Vendor/ABBYY/SDK/ProcessingOperation.h; sourceTree = "<group>"; };
+		3FA1517F1AEFCFAC00CA5CA8 /* ProcessingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProcessingOperation.m; path = Vendor/ABBYY/SDK/ProcessingOperation.m; sourceTree = "<group>"; };
+		3FA151861AEFCFB900CA5CA8 /* CONABBYYManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONABBYYManager.h; path = Vendor/ABBYY/CONABBYYManager.h; sourceTree = "<group>"; };
+		3FA151871AEFCFB900CA5CA8 /* CONABBYYManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONABBYYManager.m; path = Vendor/ABBYY/CONABBYYManager.m; sourceTree = "<group>"; };
+		3FA151881AEFCFB900CA5CA8 /* CONABBYYResultParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONABBYYResultParser.h; path = Vendor/ABBYY/CONABBYYResultParser.h; sourceTree = "<group>"; };
+		3FA151891AEFCFB900CA5CA8 /* CONABBYYResultParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONABBYYResultParser.m; path = Vendor/ABBYY/CONABBYYResultParser.m; sourceTree = "<group>"; };
+		3FA1518F1AEFD0AE00CA5CA8 /* NSString+PList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+PList.h"; path = "Categories/NSString+PList.h"; sourceTree = "<group>"; };
+		3FA151901AEFD0AE00CA5CA8 /* NSString+PList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+PList.m"; path = "Categories/NSString+PList.m"; sourceTree = "<group>"; };
+		3FA151911AEFD0AE00CA5CA8 /* UIColor+Conquer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Conquer.h"; path = "Categories/UIColor+Conquer.h"; sourceTree = "<group>"; };
+		3FA151921AEFD0AE00CA5CA8 /* UIColor+Conquer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Conquer.m"; path = "Categories/UIColor+Conquer.m"; sourceTree = "<group>"; };
+		3FA151931AEFD0AE00CA5CA8 /* UIFont+Conquer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Conquer.h"; path = "Categories/UIFont+Conquer.h"; sourceTree = "<group>"; };
+		3FA151941AEFD0AE00CA5CA8 /* UIFont+Conquer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Conquer.m"; path = "Categories/UIFont+Conquer.m"; sourceTree = "<group>"; };
+		3FA151951AEFD0AE00CA5CA8 /* UITableView+Conquer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Conquer.h"; path = "Categories/UITableView+Conquer.h"; sourceTree = "<group>"; };
+		3FA151961AEFD0AE00CA5CA8 /* UITableView+Conquer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Conquer.m"; path = "Categories/UITableView+Conquer.m"; sourceTree = "<group>"; };
+		3FA1519B1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONBizCardTableViewCell.h; path = TableViewCells/CONBizCardTableViewCell.h; sourceTree = "<group>"; };
+		3FA1519C1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONBizCardTableViewCell.m; path = TableViewCells/CONBizCardTableViewCell.m; sourceTree = "<group>"; };
+		3FA151A71AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONBizcardDetailTableViewController.h; path = ViewControllers/CONBizcardDetailTableViewController.h; sourceTree = "<group>"; };
+		3FA151A81AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONBizcardDetailTableViewController.m; path = ViewControllers/CONBizcardDetailTableViewController.m; sourceTree = "<group>"; };
+		3FA151A91AEFD0DC00CA5CA8 /* CONBizcardImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONBizcardImageViewController.h; path = ViewControllers/CONBizcardImageViewController.h; sourceTree = "<group>"; };
+		3FA151AA1AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONBizcardImageViewController.m; path = ViewControllers/CONBizcardImageViewController.m; sourceTree = "<group>"; };
+		3FA151AB1AEFD0DC00CA5CA8 /* CONBizcardListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONBizcardListTableViewController.h; path = ViewControllers/CONBizcardListTableViewController.h; sourceTree = "<group>"; };
+		3FA151AD1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONBizcardScannerViewController.h; path = ViewControllers/CONBizcardScannerViewController.h; sourceTree = "<group>"; };
+		3FA151AE1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONBizcardScannerViewController.m; path = ViewControllers/CONBizcardScannerViewController.m; sourceTree = "<group>"; };
+		3FA151BF1AEFD25400CA5CA8 /* CONTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONTextFieldTableViewCell.h; path = TableViewCells/CONTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		3FA151C01AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONTextFieldTableViewCell.m; path = TableViewCells/CONTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		3FA151C91AEFF80400CA5CA8 /* grayShutter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grayShutter@2x.png"; path = "Resources/2x/grayShutter@2x.png"; sourceTree = "<group>"; };
+		3FA151CA1AEFF80400CA5CA8 /* whiteShutter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "whiteShutter@2x.png"; path = "Resources/2x/whiteShutter@2x.png"; sourceTree = "<group>"; };
+		3FA151CD1AEFFA8500CA5CA8 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		3FA151CE1AEFFA8500CA5CA8 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		3FA151D31AEFFBA400CA5CA8 /* BizCard+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BizCard+Manager.h"; path = "Model/BizCard+Manager.h"; sourceTree = "<group>"; };
+		3FA151D41AEFFBA400CA5CA8 /* BizCard+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BizCard+Manager.m"; path = "Model/BizCard+Manager.m"; sourceTree = "<group>"; };
+		3FA151D61AEFFE8600CA5CA8 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Model/Account.h; sourceTree = "<group>"; };
+		3FA151D71AEFFE8600CA5CA8 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Model/Account.m; sourceTree = "<group>"; };
+		3FA151D91AEFFE8700CA5CA8 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = Model/Contact.h; sourceTree = "<group>"; };
+		3FA151DA1AEFFE8700CA5CA8 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = Model/Contact.m; sourceTree = "<group>"; };
+		3FA151DC1AEFFEA200CA5CA8 /* Contact+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+Manager.h"; sourceTree = "<group>"; };
+		3FA151DD1AEFFEA200CA5CA8 /* Contact+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+Manager.m"; sourceTree = "<group>"; };
+		3FA151DF1AEFFEB500CA5CA8 /* Account+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+Manager.h"; sourceTree = "<group>"; };
+		3FA151E01AEFFEB500CA5CA8 /* Account+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+Manager.m"; sourceTree = "<group>"; };
+		3FA151E21AF002CC00CA5CA8 /* UIAlertController+Conquer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Conquer.h"; path = "Categories/UIAlertController+Conquer.h"; sourceTree = "<group>"; };
+		3FA151E31AF002CC00CA5CA8 /* UIAlertController+Conquer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Conquer.m"; path = "Categories/UIAlertController+Conquer.m"; sourceTree = "<group>"; };
+		3FA151E51AF010BE00CA5CA8 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		3FA151E71AF0313900CA5CA8 /* BizcardOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BizcardOperation.h; sourceTree = "<group>"; };
+		3FA151E81AF0313900CA5CA8 /* BizcardOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BizcardOperation.m; sourceTree = "<group>"; };
+		3FA151ED1AF1189500CA5CA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3FA151F31AF11B2000CA5CA8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3FA151F41AF11B2000CA5CA8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3FA151FA1AF1416F00CA5CA8 /* CONContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONContactListTableViewController.h; sourceTree = "<group>"; };
+		3FA151FB1AF1416F00CA5CA8 /* CONContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONContactListTableViewController.m; sourceTree = "<group>"; };
+		3FA151FD1AF14B5900CA5CA8 /* CONAccountListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONAccountListTableViewController.h; sourceTree = "<group>"; };
+		3FA151FE1AF14B5900CA5CA8 /* CONAccountListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONAccountListTableViewController.m; sourceTree = "<group>"; };
+		3FA152031AF28B0600CA5CA8 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		3FA1520D1AF3F86000CA5CA8 /* BizCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BizCard.h; sourceTree = "<group>"; };
+		3FA1520E1AF3F86100CA5CA8 /* BizCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BizCard.m; sourceTree = "<group>"; };
+		3FA152101AF4152700CA5CA8 /* errorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errorIcon.png; sourceTree = "<group>"; };
+		3FA152631AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONBizcardListTableViewController.m; sourceTree = "<group>"; };
+		3FA152651AF906CE00CA5CA8 /* CONTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONTextViewTableViewCell.h; path = TableViewCells/CONTextViewTableViewCell.h; sourceTree = "<group>"; };
+		3FA152661AF906CE00CA5CA8 /* CONTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONTextViewTableViewCell.m; path = TableViewCells/CONTextViewTableViewCell.m; sourceTree = "<group>"; };
+		3FA152681AF90A2400CA5CA8 /* CONPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONPlaceholderTextView.h; sourceTree = "<group>"; };
+		3FA152691AF90A2400CA5CA8 /* CONPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONPlaceholderTextView.m; sourceTree = "<group>"; };
 		3FDFA9EA1AEFCA9200C41FA5 /* bizcardScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bizcardScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDFA9EE1AEFCA9200C41FA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDFA9EF1AEFCA9200C41FA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FDFA9F11AEFCA9200C41FA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FDFA9F21AEFCA9200C41FA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FDFA9F51AEFCA9300C41FA5 /* bizcardScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bizcardScanner.xcdatamodel; sourceTree = "<group>"; };
-		3FDFA9F71AEFCA9300C41FA5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3FDFA9F81AEFCA9300C41FA5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3FDFA9FB1AEFCA9300C41FA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FDFA9FD1AEFCA9300C41FA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3FDFAA001AEFCA9300C41FA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3FDFAA061AEFCA9300C41FA5 /* bizcardScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bizcardScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +152,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA152041AF28B0600CA5CA8 /* AddressBook.framework in Frameworks */,
+				3FA151EE1AF1189500CA5CA8 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +167,138 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA151511AEFCDC000CA5CA8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FA151FA1AF1416F00CA5CA8 /* CONContactListTableViewController.h */,
+				3FA151FB1AF1416F00CA5CA8 /* CONContactListTableViewController.m */,
+				3FA151FD1AF14B5900CA5CA8 /* CONAccountListTableViewController.h */,
+				3FA151FE1AF14B5900CA5CA8 /* CONAccountListTableViewController.m */,
+				3FA151A71AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.h */,
+				3FA151A81AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.m */,
+				3FA151A91AEFD0DC00CA5CA8 /* CONBizcardImageViewController.h */,
+				3FA151AA1AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m */,
+				3FA151AB1AEFD0DC00CA5CA8 /* CONBizcardListTableViewController.h */,
+				3FA152631AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m */,
+				3FA151AD1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.h */,
+				3FA151AE1AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3FA151521AEFCDCB00CA5CA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FA1520D1AF3F86000CA5CA8 /* BizCard.h */,
+				3FA1520E1AF3F86100CA5CA8 /* BizCard.m */,
+				3FA151D31AEFFBA400CA5CA8 /* BizCard+Manager.h */,
+				3FA151D41AEFFBA400CA5CA8 /* BizCard+Manager.m */,
+				3FA151D91AEFFE8700CA5CA8 /* Contact.h */,
+				3FA151DA1AEFFE8700CA5CA8 /* Contact.m */,
+				3FA151DC1AEFFEA200CA5CA8 /* Contact+Manager.h */,
+				3FA151DD1AEFFEA200CA5CA8 /* Contact+Manager.m */,
+				3FA151D61AEFFE8600CA5CA8 /* Account.h */,
+				3FA151D71AEFFE8600CA5CA8 /* Account.m */,
+				3FA151DF1AEFFEB500CA5CA8 /* Account+Manager.h */,
+				3FA151E01AEFFEB500CA5CA8 /* Account+Manager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3FA151541AEFCDE400CA5CA8 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				3FA151581AEFCE4900CA5CA8 /* ABBYY */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		3FA151561AEFCE1000CA5CA8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3FA1519B1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.h */,
+				3FA1519C1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.m */,
+				3FA151BF1AEFD25400CA5CA8 /* CONTextFieldTableViewCell.h */,
+				3FA151C01AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m */,
+				3FA152651AF906CE00CA5CA8 /* CONTextViewTableViewCell.h */,
+				3FA152661AF906CE00CA5CA8 /* CONTextViewTableViewCell.m */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		3FA151571AEFCE2400CA5CA8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3FA1518F1AEFD0AE00CA5CA8 /* NSString+PList.h */,
+				3FA151901AEFD0AE00CA5CA8 /* NSString+PList.m */,
+				3FA151911AEFD0AE00CA5CA8 /* UIColor+Conquer.h */,
+				3FA151921AEFD0AE00CA5CA8 /* UIColor+Conquer.m */,
+				3FA151931AEFD0AE00CA5CA8 /* UIFont+Conquer.h */,
+				3FA151941AEFD0AE00CA5CA8 /* UIFont+Conquer.m */,
+				3FA151951AEFD0AE00CA5CA8 /* UITableView+Conquer.h */,
+				3FA151961AEFD0AE00CA5CA8 /* UITableView+Conquer.m */,
+				3FA151E21AF002CC00CA5CA8 /* UIAlertController+Conquer.h */,
+				3FA151E31AF002CC00CA5CA8 /* UIAlertController+Conquer.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		3FA151581AEFCE4900CA5CA8 /* ABBYY */ = {
+			isa = PBXGroup;
+			children = (
+				3FA151861AEFCFB900CA5CA8 /* CONABBYYManager.h */,
+				3FA151871AEFCFB900CA5CA8 /* CONABBYYManager.m */,
+				3FA151881AEFCFB900CA5CA8 /* CONABBYYResultParser.h */,
+				3FA151891AEFCFB900CA5CA8 /* CONABBYYResultParser.m */,
+				3FA151611AEFCE8B00CA5CA8 /* SDK */,
+			);
+			name = ABBYY;
+			sourceTree = "<group>";
+		};
+		3FA151611AEFCE8B00CA5CA8 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				3FA151741AEFCFAC00CA5CA8 /* ABBYYTask.h */,
+				3FA151751AEFCFAC00CA5CA8 /* ABBYYTask.m */,
+				3FA151761AEFCFAC00CA5CA8 /* ActivationInfo.h */,
+				3FA151771AEFCFAC00CA5CA8 /* ActivationInfo.m */,
+				3FA151781AEFCFAC00CA5CA8 /* HTTPOperation.h */,
+				3FA151791AEFCFAC00CA5CA8 /* HTTPOperation.m */,
+				3FA1517A1AEFCFAC00CA5CA8 /* NSData+Base64.h */,
+				3FA1517B1AEFCFAC00CA5CA8 /* NSData+Base64.m */,
+				3FA1517C1AEFCFAC00CA5CA8 /* NSString+Base64.h */,
+				3FA1517D1AEFCFAC00CA5CA8 /* NSString+Base64.m */,
+				3FA1517E1AEFCFAC00CA5CA8 /* ProcessingOperation.h */,
+				3FA1517F1AEFCFAC00CA5CA8 /* ProcessingOperation.m */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
+		3FA151C81AEFF77800CA5CA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FA152101AF4152700CA5CA8 /* errorIcon.png */,
+				3FA151C91AEFF80400CA5CA8 /* grayShutter@2x.png */,
+				3FA151CA1AEFF80400CA5CA8 /* whiteShutter@2x.png */,
+				3FA151E51AF010BE00CA5CA8 /* lock.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3FA151EF1AF1196900CA5CA8 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3FA151F31AF11B2000CA5CA8 /* Reachability.h */,
+				3FA151F41AF11B2000CA5CA8 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		3FDFA9E11AEFCA9200C41FA5 = {
 			isa = PBXGroup;
 			children = (
+				3FA152031AF28B0600CA5CA8 /* AddressBook.framework */,
+				3FA151ED1AF1189500CA5CA8 /* SystemConfiguration.framework */,
 				3FDFA9EC1AEFCA9200C41FA5 /* bizcardScanner */,
 				3FDFAA091AEFCA9300C41FA5 /* bizcardScannerTests */,
 				3FDFA9EB1AEFCA9200C41FA5 /* Products */,
@@ -83,14 +317,24 @@
 		3FDFA9EC1AEFCA9200C41FA5 /* bizcardScanner */ = {
 			isa = PBXGroup;
 			children = (
+				3FA151EF1AF1196900CA5CA8 /* Reachability */,
 				3FDFA9F11AEFCA9200C41FA5 /* AppDelegate.h */,
 				3FDFA9F21AEFCA9200C41FA5 /* AppDelegate.m */,
-				3FDFA9F71AEFCA9300C41FA5 /* ViewController.h */,
-				3FDFA9F81AEFCA9300C41FA5 /* ViewController.m */,
-				3FDFA9FA1AEFCA9300C41FA5 /* Main.storyboard */,
+				3FA151CD1AEFFA8500CA5CA8 /* DataManager.h */,
+				3FA151CE1AEFFA8500CA5CA8 /* DataManager.m */,
+				3FA151E71AF0313900CA5CA8 /* BizcardOperation.h */,
+				3FA151E81AF0313900CA5CA8 /* BizcardOperation.m */,
+				3FA152681AF90A2400CA5CA8 /* CONPlaceholderTextView.h */,
+				3FA152691AF90A2400CA5CA8 /* CONPlaceholderTextView.m */,
+				3FA151571AEFCE2400CA5CA8 /* Categories */,
+				3FA151561AEFCE1000CA5CA8 /* TableViewCells */,
+				3FA151541AEFCDE400CA5CA8 /* Vendor */,
+				3FA151521AEFCDCB00CA5CA8 /* Model */,
+				3FA151511AEFCDC000CA5CA8 /* ViewControllers */,
 				3FDFA9FD1AEFCA9300C41FA5 /* Images.xcassets */,
 				3FDFA9FF1AEFCA9300C41FA5 /* LaunchScreen.xib */,
 				3FDFA9F41AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld */,
+				3FA151C81AEFF77800CA5CA8 /* Resources */,
 				3FDFA9ED1AEFCA9200C41FA5 /* Supporting Files */,
 			);
 			path = bizcardScanner;
@@ -171,6 +415,7 @@
 				TargetAttributes = {
 					3FDFA9E91AEFCA9200C41FA5 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3WMHA3BSZJ;
 					};
 					3FDFAA051AEFCA9300C41FA5 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -202,9 +447,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDFA9FC1AEFCA9300C41FA5 /* Main.storyboard in Resources */,
+				3FA151CC1AEFF80400CA5CA8 /* whiteShutter@2x.png in Resources */,
+				3FA152111AF4152700CA5CA8 /* errorIcon.png in Resources */,
+				3FA151E61AF010BE00CA5CA8 /* lock.png in Resources */,
 				3FDFAA011AEFCA9300C41FA5 /* LaunchScreen.xib in Resources */,
 				3FDFA9FE1AEFCA9300C41FA5 /* Images.xcassets in Resources */,
+				3FA151CB1AEFF80400CA5CA8 /* grayShutter@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,9 +470,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA151C11AEFD25400CA5CA8 /* CONTextFieldTableViewCell.m in Sources */,
+				3FA1519A1AEFD0AE00CA5CA8 /* UITableView+Conquer.m in Sources */,
+				3FA151B21AEFD0DC00CA5CA8 /* CONBizcardScannerViewController.m in Sources */,
+				3FA1518B1AEFCFB900CA5CA8 /* CONABBYYResultParser.m in Sources */,
+				3FA1518A1AEFCFB900CA5CA8 /* CONABBYYManager.m in Sources */,
+				3FA151AF1AEFD0DC00CA5CA8 /* CONBizcardDetailTableViewController.m in Sources */,
+				3FA1526A1AF90A2400CA5CA8 /* CONPlaceholderTextView.m in Sources */,
+				3FA151801AEFCFAC00CA5CA8 /* ABBYYTask.m in Sources */,
 				3FDFA9F31AEFCA9200C41FA5 /* AppDelegate.m in Sources */,
+				3FA151D81AEFFE8600CA5CA8 /* Account.m in Sources */,
+				3FA151811AEFCFAC00CA5CA8 /* ActivationInfo.m in Sources */,
+				3FA151D51AEFFBA400CA5CA8 /* BizCard+Manager.m in Sources */,
+				3FA151F51AF11B2000CA5CA8 /* Reachability.m in Sources */,
+				3FA151E91AF0313900CA5CA8 /* BizcardOperation.m in Sources */,
+				3FA1519D1AEFD0BA00CA5CA8 /* CONBizCardTableViewCell.m in Sources */,
+				3FA151CF1AEFFA8500CA5CA8 /* DataManager.m in Sources */,
+				3FA151E41AF002CC00CA5CA8 /* UIAlertController+Conquer.m in Sources */,
+				3FA151E11AEFFEB500CA5CA8 /* Account+Manager.m in Sources */,
+				3FA151831AEFCFAC00CA5CA8 /* NSData+Base64.m in Sources */,
+				3FA151981AEFD0AE00CA5CA8 /* UIColor+Conquer.m in Sources */,
+				3FA151FC1AF1416F00CA5CA8 /* CONContactListTableViewController.m in Sources */,
+				3FA152671AF906CE00CA5CA8 /* CONTextViewTableViewCell.m in Sources */,
+				3FA151841AEFCFAC00CA5CA8 /* NSString+Base64.m in Sources */,
+				3FA152641AF7E00D00CA5CA8 /* CONBizcardListTableViewController.m in Sources */,
+				3FA151DB1AEFFE8700CA5CA8 /* Contact.m in Sources */,
+				3FA151B01AEFD0DC00CA5CA8 /* CONBizcardImageViewController.m in Sources */,
+				3FA151FF1AF14B5900CA5CA8 /* CONAccountListTableViewController.m in Sources */,
+				3FA151851AEFCFAC00CA5CA8 /* ProcessingOperation.m in Sources */,
+				3FA151821AEFCFAC00CA5CA8 /* HTTPOperation.m in Sources */,
+				3FA151991AEFD0AE00CA5CA8 /* UIFont+Conquer.m in Sources */,
+				3FA1520F1AF3F86100CA5CA8 /* BizCard.m in Sources */,
 				3FDFA9F61AEFCA9300C41FA5 /* bizcardScanner.xcdatamodeld in Sources */,
-				3FDFA9F91AEFCA9300C41FA5 /* ViewController.m in Sources */,
+				3FA151DE1AEFFEA200CA5CA8 /* Contact+Manager.m in Sources */,
+				3FA151971AEFD0AE00CA5CA8 /* NSString+PList.m in Sources */,
 				3FDFA9F01AEFCA9200C41FA5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,14 +527,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3FDFA9FA1AEFCA9300C41FA5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FDFA9FB1AEFCA9300C41FA5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FDFA9FF1AEFCA9300C41FA5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -351,9 +622,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = bizcardScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6b26c5b0-b7e7-407a-9833-c9a75f3accf3";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -361,9 +636,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = bizcardScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6b26c5b0-b7e7-407a-9833-c9a75f3accf3";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -420,6 +699,7 @@
 				3FDFAA121AEFCA9300C41FA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FDFAA131AEFCA9300C41FA5 /* Build configuration list for PBXNativeTarget "bizcardScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +708,7 @@
 				3FDFAA151AEFCA9300C41FA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
