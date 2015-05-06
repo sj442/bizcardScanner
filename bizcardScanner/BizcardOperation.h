@@ -12,6 +12,8 @@
 
 @interface BizcardOperation : NSOperation
 
+@property (strong, nonatomic) NSManagedObjectID *objectID;
+
 - (instancetype)initWithManagedObjectID:(NSManagedObjectID *)objectID;
 
 @end

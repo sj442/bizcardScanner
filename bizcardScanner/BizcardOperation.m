@@ -14,11 +14,15 @@
 
 @interface BizcardOperation ()
 
-@property (strong, nonatomic) NSManagedObjectID *objectID;
+@property (assign, nonatomic) BOOL isExecuting;
+@property (assign, nonatomic) BOOL isFinished;
 
 @end
 
 @implementation BizcardOperation
+
+@synthesize isExecuting = _isExecuting;
+@synthesize isFinished = _isFinished;
 
 - (instancetype)initWithManagedObjectID:(NSManagedObjectID *)objectID
 {
@@ -31,7 +35,17 @@
 
 - (void)main
 {
+  
+}
+
+
+- (void)start
+{
   BizCard *bizcard = (BizCard *)[[DataManager sharedManager].mainContext objectWithID:self.objectID];
+  
+  [self willChangeValueForKey:@"isExecuting"];
+  _isExecuting = YES;
+  [self didChangeValueForKey:@"isExecuting"];
   
   NSString *fileName = bizcard.fileName;
   NSString *documentsPath = [BizCard documentsDirectory];
@@ -50,7 +64,14 @@
     BizCard *b = (BizCard *)object;
     b.responseData = cardData;
     b.dateProcessed = [NSDate date];
-    [[DataManager sharedManager] saveContext:NO];
+    
+    [self willChangeValueForKey:@"isExecuting"];
+    _isExecuting = NO;
+    [self didChangeValueForKey:@"isExecuting"];
+    
+    [self willChangeValueForKey:@"isFinished"];
+    _isFinished = YES;
+    [self didChangeValueForKey:@"isFinished"];
   }];
 }
 

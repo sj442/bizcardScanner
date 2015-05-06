@@ -115,6 +115,7 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   return _internetActive;
 }
 
+
 #pragma mark - Setup
 
 - (void)setupTableView
@@ -353,16 +354,19 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
 
 - (void)processEmptyBizcards
 {
-  if (self.internetActive == YES) {
+  NSArray *emptyBizcards = [BizCard emptyBizcards];
+  
+  NSMutableArray *operations = [NSMutableArray array];
+  
+  for (NSManagedObjectID *objectID in emptyBizcards) {
     
-    NSArray *emptyBizcards = [BizCard emptyBizcards];
-    
-    for (NSManagedObjectID *objectID in emptyBizcards) {
-      
-      BizcardOperation *bo = [[BizcardOperation alloc]initWithManagedObjectID:objectID];
-      [[NSOperationQueue mainQueue] addOperation:bo];
-    }
+    BizcardOperation *bo = [[BizcardOperation alloc]initWithManagedObjectID:objectID];
+    bo.name = [NSString stringWithFormat:@"%@", objectID];
+    [operations addObject:bo];
   }
+  
+  [[NSOperationQueue mainQueue] addOperations:operations waitUntilFinished:NO];
+  [[DataManager sharedManager] saveContext:NO];
 }
 
 

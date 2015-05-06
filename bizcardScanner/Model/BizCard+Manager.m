@@ -28,15 +28,14 @@
 + (NSFetchedResultsController *)fetchedResultsController
 {
   NSSortDescriptor *createdDate = [[NSSortDescriptor alloc] initWithKey:@"createdDate" ascending:NO];
-  NSSortDescriptor *dateProcessed = [[NSSortDescriptor alloc]initWithKey:@"dateProcessed" ascending:NO];
-    
+  
   NSManagedObjectContext *context = [DataManager sharedManager].mainContext;
   NSEntityDescription *entity = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context];
   
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
   [fetchRequest setEntity:entity];
   
-  [fetchRequest setSortDescriptors:@[dateProcessed, createdDate]];
+  [fetchRequest setSortDescriptors:@[createdDate]];
   
   [fetchRequest setFetchBatchSize:40];
   
@@ -116,6 +115,7 @@
   NSFetchRequest *request = [NSFetchRequest new];
   NSManagedObjectContext *context = [DataManager sharedManager].mainContext;
   NSEntityDescription *entity = [NSEntityDescription entityForName:[BizCard entityName] inManagedObjectContext:context];
+  NSSortDescriptor *createdDate = [NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:YES];
   
   NSPredicate *noDataPredicate = [NSPredicate predicateWithFormat:@"dateProcessed = nil"];
   
@@ -123,6 +123,7 @@
   request.entity = entity;
   request.fetchLimit = 10;
   request.predicate = noDataPredicate;
+  request.sortDescriptors = @[createdDate];
   
   NSError *error;
   return [context executeFetchRequest:request error:&error];

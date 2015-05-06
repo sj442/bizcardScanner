@@ -28,8 +28,8 @@
 
 @implementation CONABBYYManager
 
-static NSString *EPABBYYapplicationID = @"s1812App";
-static NSString *EPABBYYPassword = @"49l9+qFas+LcUes4n9pVHBY4";
+static NSString *EPABBYYapplicationID = @"bizcardReaderApp";
+static NSString *EPABBYYPassword = @"R8TSPPa5X357JFYVzBBQ/Sj+";
 
 #pragma mark - Lifecycle
 
