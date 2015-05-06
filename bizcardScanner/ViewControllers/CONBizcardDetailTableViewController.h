@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <CoreData/CoreData.h>
+
 /*
 
 - custom Accessors
@@ -29,6 +31,6 @@
 
 @interface CONBizcardDetailTableViewController : UITableViewController
 
-- (instancetype)initWithBizcard:(BizCard *)bizcard;
+- (instancetype)initWithBizcard:(NSManagedObjectID *)objectID;
 
 @end

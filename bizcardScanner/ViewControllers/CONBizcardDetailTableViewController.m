@@ -32,9 +32,11 @@ typedef NS_ENUM(NSUInteger, CONSection) {
   CONSectionNotes
 };
 
-@interface CONBizcardDetailTableViewController () <UITextFieldDelegate, UITextViewDelegate>
+@interface CONBizcardDetailTableViewController () <UITextFieldDelegate, UITextViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) BizCard *bizcard;
+
+@property (strong, nonatomic) NSManagedObjectID *objectID;
 
 @property (strong, nonatomic) NSMutableDictionary *bizcardInfo;
 
@@ -64,40 +66,20 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 @property (strong, nonatomic) UITextView *notesTextView;
 
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
 @end
 
 @implementation CONBizcardDetailTableViewController
 
 #pragma mark - Lifecycle
 
-- (instancetype)initWithBizcard:(BizCard *)bizcard
+- (instancetype)initWithBizcard:(NSManagedObjectID *)objectID
 {
   self = [super initWithStyle:UITableViewStyleGrouped];
   
   if (self) {
-    
-    self.bizcard = bizcard;
-    
-    self.firstName = bizcard.firstName;
-    self.lastName = bizcard.lastName;
-    self.jobTitle = bizcard.jobTitle;
-    self.company = bizcard.companyName;
-    self.notes = bizcard.notes;
-    
-    if ([bizcard.emails count] > 0) {
-      self.emails = [NSMutableArray arrayWithArray:bizcard.emails];
-    }
-    
-    if ([bizcard.phoneNumbers count] > 0) {
-      self.phoneNumbers = [NSMutableArray arrayWithArray:bizcard.phoneNumbers];
-    }
-
-    if ([bizcard.webLinks count] > 0) {
-      self.URLs = [NSMutableArray arrayWithArray:bizcard.webLinks];
-    }
-
-    self.bizcardInfo = [NSMutableDictionary dictionary];
-    [self.bizcardInfo addEntriesFromDictionary:bizcard.responseData];
+    self.objectID = objectID;
   }
   return self;
 }
@@ -106,6 +88,15 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  [NSFetchedResultsController deleteCacheWithName:[BizCard entityName]];
+  self.fetchedResultsController = [BizCard fetchedResultsController];
+  self.fetchedResultsController.delegate = self;
+  self.fetchedResultsController.fetchRequest.predicate = [NSPredicate predicateWithFormat:@"self == %@", self.objectID];
+  
+  [self.fetchedResultsController performFetch:nil];
+  
+  [self setupData];
   
   [self setupTableView];
   
@@ -130,6 +121,39 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
+- (void)setupData
+{
+  if ([self.fetchedResultsController.fetchedObjects count] > 0) {
+    
+    BizCard *bizcard  = [self.fetchedResultsController.fetchedObjects firstObject];
+    
+    self.bizcard = bizcard;
+    
+    self.notes = bizcard.notes;
+    
+    self.bizcardInfo = [NSMutableDictionary dictionary];
+    [self.bizcardInfo addEntriesFromDictionary:bizcard.responseData];
+    
+    self.emails = nil;
+    self.phoneNumbers = nil;
+    self.URLs = nil;
+    
+    if ([bizcard.emails count] > 0) {
+      self.emails = [NSMutableArray arrayWithArray:bizcard.emails];
+    }
+    
+    if ([bizcard.phoneNumbers count] > 0) {
+      self.phoneNumbers = [NSMutableArray arrayWithArray:bizcard.phoneNumbers];
+    }
+    
+    if ([bizcard.webLinks count] > 0) {
+      self.URLs = [NSMutableArray arrayWithArray:bizcard.webLinks];
+    }
+   
+  }
+}
+
+
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
@@ -139,11 +163,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)firstName
 {
-  if (!_firstName) {
+  if (!_bizcard.firstName) {
     NSArray *firstNameArray = [_bizcardInfo objectForKey:@"FirstName"];
     if (firstNameArray.count > 0) {
       _firstName = [firstNameArray firstObject];
     }
+  } else {
+    _firstName = _bizcard.firstName;
   }
   return _firstName;
 }
@@ -151,11 +177,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)lastName
 {
-  if (!_lastName) {
+  if (!_bizcard.lastName) {
     NSArray *lastNameArray = [_bizcardInfo objectForKey:@"LastName"];
     if (lastNameArray.count > 0) {
       _lastName = [lastNameArray firstObject];
     }
+  } else {
+    _lastName = _bizcard.lastName;
   }
   return _lastName;
 }
@@ -163,11 +191,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)company
 {
-  if (!_company) {
+  if (!_bizcard.companyName) {
     NSArray *companyArray = [_bizcardInfo objectForKey:@"Company"];
     if (companyArray.count > 0) {
       _company = [companyArray firstObject];
     }
+  } else {
+    _company = _bizcard.companyName;
   }
   return _company;
 }
@@ -175,11 +205,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)jobTitle
 {
-  if (!_jobTitle) {
+  if (!_bizcard.jobTitle) {
     NSArray *jobTitleArray = [_bizcardInfo objectForKey:@"Job"];
     if (jobTitleArray.count > 0) {
       _jobTitle = [jobTitleArray firstObject];
     }
+  } else {
+    _jobTitle = _bizcard.jobTitle;
   }
   return _jobTitle;
 }
@@ -187,15 +219,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)streetAddress
 {
-  if (!_streetAddress) {
-    if ([_bizcard.address objectForKey:@"streetAddress"] != nil) {
-      _streetAddress = [_bizcard.address objectForKey:@"streetAddress"];
-      return _streetAddress;
-    }
-    NSArray *streetAddressArray = [_bizcardInfo objectForKey:@"StreetAddress"];
-    if (streetAddressArray.count > 0) {
-      _streetAddress = [streetAddressArray firstObject];
-    }
+  if ([_bizcard.address objectForKey:@"streetAddress"] != nil) {
+    _streetAddress = [_bizcard.address objectForKey:@"streetAddress"];
+    return _streetAddress;
+  }
+  NSArray *streetAddressArray = [_bizcardInfo objectForKey:@"StreetAddress"];
+  if (streetAddressArray.count > 0) {
+    _streetAddress = [streetAddressArray firstObject];
   }
   return _streetAddress;
 }
@@ -203,15 +233,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)city
 {
-  if (!_city) {
-    if ([_bizcard.address objectForKey:@"city"] != nil) {
-      _city = [_bizcard.address objectForKey:@"city"];
-      return _city;
-    }
-    NSArray *cityArray = [_bizcardInfo objectForKey:@"City"];
-    if (cityArray.count > 0) {
-      _city = [cityArray firstObject];
-    }
+  if ([_bizcard.address objectForKey:@"city"] != nil) {
+    _city = [_bizcard.address objectForKey:@"city"];
+    return _city;
+  }
+  NSArray *cityArray = [_bizcardInfo objectForKey:@"City"];
+  if (cityArray.count > 0) {
+    _city = [cityArray firstObject];
   }
   return _city;
 }
@@ -219,15 +247,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)region
 {
-  if (!_region) {
-    if ([_bizcard.address objectForKey:@"region"] != nil) {
-      _region = [_bizcard.address objectForKey:@"region"];
-      return _region;
-    }
-    NSArray *regionArray = [_bizcardInfo objectForKey:@"Region"];
-    if (regionArray.count > 0) {
-      _region = [regionArray firstObject];
-    }
+  if ([_bizcard.address objectForKey:@"region"] != nil) {
+    _region = [_bizcard.address objectForKey:@"region"];
+    return _region;
+  }
+  NSArray *regionArray = [_bizcardInfo objectForKey:@"Region"];
+  if (regionArray.count > 0) {
+    _region = [regionArray firstObject];
   }
   return _region;
 }
@@ -235,15 +261,13 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)zipcode
 {
-  if (!_zipcode) {
-    if ([_bizcard.address objectForKey:@"zipcode"] != nil) {
-      _zipcode = [_bizcard.address objectForKey:@"zipcode"];
-      return _zipcode;
-    }
-    NSArray *zipcodeArray = [_bizcardInfo objectForKey:@"ZipCode"];
-    if (zipcodeArray.count > 0) {
-      _zipcode = [zipcodeArray firstObject];
-    }
+  if ([_bizcard.address objectForKey:@"zipcode"] != nil) {
+    _zipcode = [_bizcard.address objectForKey:@"zipcode"];
+    return _zipcode;
+  }
+  NSArray *zipcodeArray = [_bizcardInfo objectForKey:@"ZipCode"];
+  if (zipcodeArray.count > 0) {
+    _zipcode = [zipcodeArray firstObject];
   }
   return _zipcode;
 }
@@ -286,6 +310,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
   }
   return _phoneNumbers;
 }
+
 
 #pragma mark - Setup
 
@@ -503,6 +528,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
   }
   return nil;
 }
+
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -954,5 +980,86 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 {
   [self.notesTextView resignFirstResponder];
 }
+
+#pragma mark - NSFetchedResultsController Delegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+  [self.tableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+  UITableView *tableView = self.tableView;
+  
+  switch(type) {
+      
+    case NSFetchedResultsChangeInsert:
+      break;
+      
+    case NSFetchedResultsChangeDelete:
+      break;
+      
+    case NSFetchedResultsChangeUpdate: {
+      
+      [self setupData];
+      
+      NSInteger emails = [tableView numberOfRowsInSection:CONSectionEmail];
+      
+      NSMutableArray *emailArray = [NSMutableArray array];
+      
+      for (int i = emails; i < [self.emails count]; i++) {
+        
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionEmail];
+        [emailArray addObject:ip];
+      }
+
+      [tableView insertRowsAtIndexPaths:emailArray withRowAnimation:UITableViewRowAnimationAutomatic];
+      
+      NSInteger phNumbers = [tableView numberOfRowsInSection:CONSectionPhoneNumbers];
+      
+      NSMutableArray *phnumberArray = [NSMutableArray array];
+      
+      for (int i = phNumbers; i < [self.phoneNumbers count]; i++) {
+        
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionPhoneNumbers];
+        [phnumberArray addObject:ip];
+      }
+      
+      [tableView insertRowsAtIndexPaths:phnumberArray withRowAnimation:UITableViewRowAnimationAutomatic];
+      
+      
+      NSInteger urls = [tableView numberOfRowsInSection:CONSectionURL];
+      
+      NSMutableArray *urlArray = [NSMutableArray array];
+      
+      for (int i = urls; i < [self.URLs count]; i++) {
+        
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionURL];
+        [urlArray addObject:ip];
+      }
+      
+      [tableView insertRowsAtIndexPaths:urlArray withRowAnimation:UITableViewRowAnimationAutomatic];
+      
+      [tableView reloadData];
+    }
+      break;
+      
+    case NSFetchedResultsChangeMove:
+      [tableView deleteRowsAtIndexPaths:[NSArray
+                                         arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+      [tableView insertRowsAtIndexPaths:[NSArray
+                                         arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+      break;
+  }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+  [self.tableView endUpdates];
+}
+
 
 @end

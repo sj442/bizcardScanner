@@ -4,7 +4,6 @@
 //
 //  Created by Sunayna Jain on 3/20/15.
 //  Copyright (c) 2015 Enhatch. All rights reserved.
-//
 
 #import "CONBizcardListTableViewController.h"
 #import "CONBizcardScannerViewController.h"
@@ -46,8 +45,8 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
 
 #pragma mark - Lifecycle
 
-- (void)viewDidLoad {
-  
+- (void)viewDidLoad
+{
   [super viewDidLoad];
   
   [self registerTableViewCells];
@@ -56,15 +55,15 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   
   [self setupTableView];
   
+  [self setupNotifications];
+  
   [NSFetchedResultsController deleteCacheWithName:[BizCard entityName]];
   self.fetchedResultsController = [BizCard fetchedResultsController];
   self.fetchedResultsController.delegate = self;
   
   [self.fetchedResultsController performFetch:nil];
-  
-  self.internetReachable = [Reachability reachabilityForInternetConnection];
-  [self.internetReachable startNotifier];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -76,9 +75,11 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
 
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
   
-  if (self.internetActive == YES && self.presentScanner == YES) {
+  if (self.presentScanner == YES) {
     [self processEmptyBizcards];
   }
+  
+  [self.tableView reloadData];
 }
 
 
@@ -87,6 +88,7 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   self.tableView.separatorInset = UIEdgeInsetsZero;
   self.tableView.layoutMargins = UIEdgeInsetsZero;
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -101,22 +103,14 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Setup
 
-#pragma mark - Custom Accessors
-
-- (BOOL)internetActive
+- (void)setupNotifications
 {
-  NetworkStatus internetStatus = [self.internetReachable currentReachabilityStatus];
-  if (internetStatus == NotReachable) {
-    _internetActive = NO;
-  } else if (internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN) {
-    _internetActive = YES;
-  }
-  return _internetActive;
+  self.internetReachable = [Reachability reachabilityForInternetConnection];
+  [self.internetReachable startNotifier];
 }
 
-
-#pragma mark - Setup
 
 - (void)setupTableView
 {
@@ -142,6 +136,18 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
 
 #pragma mark - Getters
 
+- (BOOL)internetActive
+{
+  NetworkStatus internetStatus = [self.internetReachable currentReachabilityStatus];
+  if (internetStatus == NotReachable) {
+    _internetActive = NO;
+  } else if (internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN) {
+    _internetActive = YES;
+  }
+  return _internetActive;
+}
+
+
 - (NSDateFormatter *)dateFormatter
 {
   if (!_dateFormatter) {
@@ -151,6 +157,7 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   return _dateFormatter;
 }
 
+
 - (NSDateFormatter *)fullDateFormatter
 {
   if (!_fullDateFormatter) {
@@ -159,7 +166,6 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   }
   return _fullDateFormatter;
 }
-
 
 #pragma mark - IBActions
 
@@ -286,7 +292,7 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   BizCard *bizcard = [self.fetchedResultsController objectAtIndexPath:indexPath];
-  CONBizcardDetailTableViewController *bizcardDetail = [[CONBizcardDetailTableViewController alloc]initWithBizcard:bizcard];
+  CONBizcardDetailTableViewController *bizcardDetail = [[CONBizcardDetailTableViewController alloc]initWithBizcard:bizcard.objectID];
   [self.navigationController pushViewController:bizcardDetail animated:YES];
 }
 
@@ -354,19 +360,20 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
 
 - (void)processEmptyBizcards
 {
-  NSArray *emptyBizcards = [BizCard emptyBizcards];
-  
-  NSMutableArray *operations = [NSMutableArray array];
-  
-  for (NSManagedObjectID *objectID in emptyBizcards) {
+  if ([[NSOperationQueue mainQueue] operationCount] == 0) {
     
-    BizcardOperation *bo = [[BizcardOperation alloc]initWithManagedObjectID:objectID];
-    bo.name = [NSString stringWithFormat:@"%@", objectID];
-    [operations addObject:bo];
+    NSArray *emptyBizcards = [BizCard emptyBizcards];
+    
+    NSMutableArray *operations = [NSMutableArray array];
+    
+    for (NSManagedObjectID *objectID in emptyBizcards) {
+      
+      BizcardOperation *bo = [[BizcardOperation alloc]initWithManagedObjectID:objectID];
+      bo.name = [NSString stringWithFormat:@"%@", objectID];
+      [operations addObject:bo];
+    }
+    [[NSOperationQueue mainQueue] addOperations:operations waitUntilFinished:NO];
   }
-  
-  [[NSOperationQueue mainQueue] addOperations:operations waitUntilFinished:NO];
-  [[DataManager sharedManager] saveContext:NO];
 }
 
 
@@ -442,7 +449,6 @@ static NSString *CONBizCardTableViewCellIdentifier = @"CONBizCardCell";
   } else if ([yesterday isEqualToDate:roundedDate]) {
     return @"Yesterday";
   }
-  
   return [formatter stringFromDate:date];
 }
 

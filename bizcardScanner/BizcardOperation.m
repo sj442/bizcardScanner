@@ -33,11 +33,6 @@
   return self;
 }
 
-- (void)main
-{
-  
-}
-
 
 - (void)start
 {
@@ -56,23 +51,31 @@
   
   if (!image) {
     [self cancel];
+    
+    [self finish];
     return;
   }
   
   [[CONABBYYManager sharedManager] processBusinessCardFrontImage:image backImage:nil completion:^(NSDictionary *cardData) {
+    
     NSManagedObject *object = [[DataManager sharedManager].mainContext objectWithID:self.objectID];
     BizCard *b = (BizCard *)object;
     b.responseData = cardData;
     b.dateProcessed = [NSDate date];
-    
-    [self willChangeValueForKey:@"isExecuting"];
-    _isExecuting = NO;
-    [self didChangeValueForKey:@"isExecuting"];
-    
-    [self willChangeValueForKey:@"isFinished"];
-    _isFinished = YES;
-    [self didChangeValueForKey:@"isFinished"];
+    [[DataManager sharedManager] saveContext:NO];
+    [self finish];
   }];
+}
+
+- (void)finish
+{
+  [self willChangeValueForKey:@"isExecuting"];
+  _isExecuting = NO;
+  [self didChangeValueForKey:@"isExecuting"];
+  
+  [self willChangeValueForKey:@"isFinished"];
+  _isFinished = YES;
+  [self didChangeValueForKey:@"isFinished"];
 }
 
 @end
