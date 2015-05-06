@@ -131,6 +131,15 @@ typedef NS_ENUM(NSUInteger, CONSection) {
     
     self.notes = bizcard.notes;
     
+    [self setFirstNameValue];
+    [self setlastNameValue];
+    [self setCompanyValue];
+    [self setJobTitleValue];
+    [self setStreetAddressValue];
+    [self setCityValue];
+    [self setRegionValue];
+    [self setZipcodeValue];
+    
     self.bizcardInfo = [NSMutableDictionary dictionary];
     [self.bizcardInfo addEntriesFromDictionary:bizcard.responseData];
     
@@ -161,7 +170,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 #pragma mark - Custom Accessors
 
-- (NSString *)firstName
+- (NSString *)setFirstNameValue
 {
   if (!_bizcard.firstName) {
     NSArray *firstNameArray = [_bizcardInfo objectForKey:@"FirstName"];
@@ -175,7 +184,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)lastName
+- (NSString *)setlastNameValue
 {
   if (!_bizcard.lastName) {
     NSArray *lastNameArray = [_bizcardInfo objectForKey:@"LastName"];
@@ -189,7 +198,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)company
+- (NSString *)setCompanyValue
 {
   if (!_bizcard.companyName) {
     NSArray *companyArray = [_bizcardInfo objectForKey:@"Company"];
@@ -203,7 +212,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)jobTitle
+- (NSString *)setJobTitleValue
 {
   if (!_bizcard.jobTitle) {
     NSArray *jobTitleArray = [_bizcardInfo objectForKey:@"Job"];
@@ -217,7 +226,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)streetAddress
+- (NSString *)setStreetAddressValue
 {
   if ([_bizcard.address objectForKey:@"streetAddress"] != nil) {
     _streetAddress = [_bizcard.address objectForKey:@"streetAddress"];
@@ -231,7 +240,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)city
+- (NSString *)setCityValue
 {
   if ([_bizcard.address objectForKey:@"city"] != nil) {
     _city = [_bizcard.address objectForKey:@"city"];
@@ -245,7 +254,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)region
+- (NSString *)setRegionValue
 {
   if ([_bizcard.address objectForKey:@"region"] != nil) {
     _region = [_bizcard.address objectForKey:@"region"];
@@ -259,7 +268,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 
-- (NSString *)zipcode
+- (NSString *)setZipcodeValue
 {
   if ([_bizcard.address objectForKey:@"zipcode"] != nil) {
     _zipcode = [_bizcard.address objectForKey:@"zipcode"];
