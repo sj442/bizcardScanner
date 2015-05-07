@@ -1,4 +1,4 @@
-//
+ //
 //  BizcardOperation.m
 //  bizcardScanner
 //

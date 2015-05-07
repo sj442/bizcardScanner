@@ -128,20 +128,19 @@ typedef NS_ENUM(NSUInteger, CONSection) {
     BizCard *bizcard  = [self.fetchedResultsController.fetchedObjects firstObject];
     
     self.bizcard = bizcard;
-    
     self.notes = bizcard.notes;
-    
-    [self setFirstNameValue];
-    [self setlastNameValue];
-    [self setCompanyValue];
-    [self setJobTitleValue];
-    [self setStreetAddressValue];
-    [self setCityValue];
-    [self setRegionValue];
-    [self setZipcodeValue];
     
     self.bizcardInfo = [NSMutableDictionary dictionary];
     [self.bizcardInfo addEntriesFromDictionary:bizcard.responseData];
+    
+    self.firstName =  [self setFirstNameValue];
+    self.lastName =   [self setlastNameValue];
+    self.company =  [self setCompanyValue];
+    self.jobTitle =  [self setJobTitleValue];
+    self.streetAddress =  [self setStreetAddressValue];
+    self.city = [self setCityValue];
+    self.region = [self setRegionValue];
+    self.zipcode = [self setZipcodeValue];
     
     self.emails = nil;
     self.phoneNumbers = nil;
@@ -169,6 +168,45 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 }
 
 #pragma mark - Custom Accessors
+
+- (NSMutableArray *)emails
+{
+  if (!_emails) {
+    _emails = [NSMutableArray array];
+    [_emails addObjectsFromArray:[_bizcardInfo objectForKey:@"Email"]];
+  }
+  return _emails;
+}
+
+- (NSMutableArray *)phoneNumbers
+{
+  if (!_phoneNumbers) {
+    _phoneNumbers = [NSMutableArray array];
+    NSArray *phNumberArray = [_bizcardInfo objectForKey:@"Phone"];
+    NSArray *mobileArray = [_bizcardInfo objectForKey:@"Mobile"];
+    
+    if (phNumberArray.count > 0) {
+      [_phoneNumbers addObjectsFromArray:phNumberArray];
+    }
+    
+    if (mobileArray.count > 0) {
+      [_phoneNumbers addObjectsFromArray:mobileArray];
+    }
+  }
+  return _phoneNumbers;
+}
+
+- (NSMutableArray *)URLs
+{
+  if (!_URLs) {
+    _URLs = [NSMutableArray array];
+    [_URLs addObjectsFromArray: [_bizcardInfo objectForKey:@"Web"]];
+  }
+  return _URLs;
+}
+
+
+#pragma mark - Setup
 
 - (NSString *)setFirstNameValue
 {
@@ -242,7 +280,7 @@ typedef NS_ENUM(NSUInteger, CONSection) {
 
 - (NSString *)setCityValue
 {
-  if ([_bizcard.address objectForKey:@"city"] != nil) {
+  if ([_bizcard.address objectForKey:@"city"] != nil ) {
     _city = [_bizcard.address objectForKey:@"city"];
     return _city;
   }
@@ -280,48 +318,6 @@ typedef NS_ENUM(NSUInteger, CONSection) {
   }
   return _zipcode;
 }
-
-
-- (NSMutableArray *)emails
-{
-  if (!_emails) {
-    _emails = [NSMutableArray array];
-    [_emails addObjectsFromArray:[_bizcardInfo objectForKey:@"Email"]];
-  }
-  return _emails;
-}
-
-
-- (NSMutableArray *)URLs
-{
-  if (!_URLs) {
-    _URLs = [NSMutableArray array];
-    [_URLs addObjectsFromArray: [_bizcardInfo objectForKey:@"Web"]];
-  }
-  return _URLs;
-}
-
-
-- (NSMutableArray *)phoneNumbers
-{
-  if (!_phoneNumbers) {
-    _phoneNumbers = [NSMutableArray array];
-    NSArray *phNumberArray = [_bizcardInfo objectForKey:@"Phone"];
-    NSArray *mobileArray = [_bizcardInfo objectForKey:@"Mobile"];
-    
-    if (phNumberArray.count > 0) {
-      [_phoneNumbers addObjectsFromArray:phNumberArray];
-    }
-    
-    if (mobileArray.count > 0) {
-      [_phoneNumbers addObjectsFromArray:mobileArray];
-    }
-  }
-  return _phoneNumbers;
-}
-
-
-#pragma mark - Setup
 
 - (void)setupTableView
 {
@@ -1012,45 +1008,52 @@ typedef NS_ENUM(NSUInteger, CONSection) {
       
     case NSFetchedResultsChangeUpdate: {
       
+      BizCard *bizcard = [[self.fetchedResultsController fetchedObjects] firstObject];
+      NSDictionary *responseData = bizcard.responseData;
+      
+      if ([self.emails count] == 0) { //no user added emails
+        
+        NSArray *emails = [responseData objectForKey:@"Email"];
+        NSMutableArray *emailArray = [NSMutableArray array];
+        
+        for (int i = 0; i < [emails count]; i++) {
+          NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionEmail];
+          [emailArray addObject:ip];
+        }
+        [tableView insertRowsAtIndexPaths:emailArray withRowAnimation:UITableViewRowAnimationAutomatic];
+      }
+      
+      if ([self.phoneNumbers count] == 0) { // no user added phone numbers
+        
+        NSMutableArray *phoneNumbers = [NSMutableArray array];
+        NSArray *phone = [responseData objectForKey:@"Phone"];
+        NSArray *mobile = [responseData objectForKey:@"Mobile"];
+        
+        [phoneNumbers addObjectsFromArray:phone];
+        [phoneNumbers addObjectsFromArray:mobile];
+        
+        NSMutableArray *phnumberArray = [NSMutableArray array];
+        
+        for (int i = 0; i < [phoneNumbers count]; i++) {
+          NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionPhoneNumbers];
+          [phnumberArray addObject:ip];
+        }
+        [tableView insertRowsAtIndexPaths:phnumberArray withRowAnimation:UITableViewRowAnimationAutomatic];
+      }
+      
+      if ([self.URLs count ] == 0) {
+        
+        NSArray *urls = [responseData objectForKey:@"Web"];
+        NSMutableArray *urlArray = [NSMutableArray array];
+        
+        for (int i = 0; i < [urls count]; i++) {
+          NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionURL];
+          [urlArray addObject:ip];
+        }
+        [tableView insertRowsAtIndexPaths:urlArray withRowAnimation:UITableViewRowAnimationAutomatic];
+      }
+      
       [self setupData];
-      
-      NSInteger emails = [tableView numberOfRowsInSection:CONSectionEmail];
-      
-      NSMutableArray *emailArray = [NSMutableArray array];
-      
-      for (int i = emails; i < [self.emails count]; i++) {
-        
-        NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionEmail];
-        [emailArray addObject:ip];
-      }
-
-      [tableView insertRowsAtIndexPaths:emailArray withRowAnimation:UITableViewRowAnimationAutomatic];
-      
-      NSInteger phNumbers = [tableView numberOfRowsInSection:CONSectionPhoneNumbers];
-      
-      NSMutableArray *phnumberArray = [NSMutableArray array];
-      
-      for (int i = phNumbers; i < [self.phoneNumbers count]; i++) {
-        
-        NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionPhoneNumbers];
-        [phnumberArray addObject:ip];
-      }
-      
-      [tableView insertRowsAtIndexPaths:phnumberArray withRowAnimation:UITableViewRowAnimationAutomatic];
-      
-      
-      NSInteger urls = [tableView numberOfRowsInSection:CONSectionURL];
-      
-      NSMutableArray *urlArray = [NSMutableArray array];
-      
-      for (int i = urls; i < [self.URLs count]; i++) {
-        
-        NSIndexPath *ip = [NSIndexPath indexPathForRow:i inSection:CONSectionURL];
-        [urlArray addObject:ip];
-      }
-      
-      [tableView insertRowsAtIndexPaths:urlArray withRowAnimation:UITableViewRowAnimationAutomatic];
-      
       [tableView reloadData];
     }
       break;
@@ -1064,11 +1067,9 @@ typedef NS_ENUM(NSUInteger, CONSection) {
   }
 }
 
-
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
   [self.tableView endUpdates];
 }
-
 
 @end
